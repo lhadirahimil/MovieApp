@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <!--  TODO : scroll Screen  -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/moviesScrollLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- TODO : Container-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <!-- TODO :  Top Movies Layout  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topMoviesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- TODO : Top Movies -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerTopMovies"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--  TODO : Indicator  -->
+                <me.relex.circleindicator.CircleIndicator2
+                    android:id="@+id/topMoviesIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="@dimen/_10mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recyclerTopMovies" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  TODO : Genre Layout  -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/genreLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@id/topMoviesLayout">
+                <!--  TODO : Genre Title   -->
+                <TextView
+                    android:id="@+id/genreTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10mdp"
+                    android:text="@string/genres"
+                    android:textColor="@color/crayola"
+                    android:textSize="@dimen/_12font_mdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--  TODO : Genre RecyclerView  -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerGenre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:clipToPadding="false"
+                    android:paddingHorizontal="@dimen/_10mdp"
+                    app:layout_constraintTop_toBottomOf="@id/genreTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--  TODO : Last Movies Layout   -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/lastMovieLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/genreLayout">
+
+                <!--       TODO : last movie title         -->
+                <TextView
+                    android:id="@+id/tvLastMovieTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10mdp"
+                    android:text="@string/lastMovies"
+                    android:textColor="@color/crayola"
+                    android:textSize="@dimen/_12font_mdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--TODO : last Movies RecyclerView-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerLastMovies"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLastMovieTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/loadingProgress"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/drawable/bg_circle_dark.xml" value="0.1595" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/drawable/bg_round_dark.xml" value="0.157" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/drawable/shadow.xml" value="0.157" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/activity_main.xml" value="0.23278985507246377" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/empty.xml" value="0.2" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/fragment_datail.xml" value="0.264" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/fragment_favorite.xml" value="0.191025641025641" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/fragment_register.xml" value="0.264" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/fragment_search.xml" value="0.264" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/fragment_splash.xml" value="0.264" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/item_detail_image.xml" value="0.19401709401709402" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/item_home_genre_list.xml" value="0.536" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/item_home_movies_last.xml" value="0.264" />
+        <entry key="..\:/Android Code/MovieApp/app/src/main/res/layout/item_home_top_movies.xml" value="0.264" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/drawable/ic_round_access_time_24.xml" value="0.1185" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/drawable/ic_round_arrow_back_24.xml" value="0.1185" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/layout/activity_main.xml" value="0.2105978260869565" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/layout/fragment_datail.xml" value="0.2105978260869565" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/layout/fragment_home.xml" value="0.2105978260869565" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/layout/fragment_register.xml" value="0.2105978260869565" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/layout/fragment_search.xml" value="0.2105978260869565" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/layout/fragment_splash.xml" value="0.2105978260869565" />
+        <entry key="..\:/Android Code/MovieAppPowerFull/app/src/main/res/menu/bottom_menu.xml" value="1.0" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!-- TODO :  poster  -->
+    <ImageView
+        android:id="@+id/ivMoviePoster"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_350mdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
+    <!--  TODO : Shadow  -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150mdp"
+        android:background="@drawable/shadow"
+        app:layout_constraintBottom_toBottomOf="@id/ivMoviePoster" />
+    <!--  TODO : Name  -->
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="@dimen/_14font_mdp"
+        android:maxLines="1"
+        tools:text="Movie Title"
+        android:ellipsize="end"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="@dimen/_5mdp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvMovieInfo"/>
+
+    <!--  TODO : Info   -->
+    <TextView
+        android:id="@+id/tvMovieInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="movie information"
+        android:layout_marginBottom="@dimen/_10mdp"
+        android:textSize="@dimen/_12font_mdp"
+        android:textColor="@color/philippineSilver"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:drawableStartCompat="@drawable/ic_round_star_24"
+        android:layout_marginHorizontal="@dimen/_20mdp"
+        android:gravity="center"
+        app:drawableTint="@color/crayola" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

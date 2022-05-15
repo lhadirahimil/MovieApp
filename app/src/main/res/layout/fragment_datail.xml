@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.datail.DatailFragment">
+
+    <!--  scroll View -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/detailScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <!--    container    -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- images -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/posterImagesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_400mdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- backImage -->
+                <ImageView
+                    android:id="@+id/ivPosterBackImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.1"
+                    android:scaleType="centerCrop" />
+
+
+                <!--        Normal Image        -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivMainPoster"
+                    android:layout_width="@dimen/_210mdp"
+                    android:layout_height="@dimen/_300mdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/roundedImageView" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--     header Buttons      -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10mdp"
+                app:layout_constraintTop_toTopOf="parent">
+                <!--       back image view         -->
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="@dimen/_35mdp"
+                    android:layout_height="@dimen/_35mdp"
+                    android:background="@drawable/bg_circle_dark"
+                    android:padding="@dimen/_9mdp"
+                    android:src="@drawable/ic_round_arrow_back_24"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/philippineSilver" />
+
+                <!--       Favorite Image  View       -->
+                <ImageView
+                    android:id="@+id/ivFavorite"
+                    android:layout_width="@dimen/_35mdp"
+                    android:layout_height="@dimen/_35mdp"
+                    android:background="@drawable/bg_circle_dark"
+                    android:padding="@dimen/_9mdp"
+                    android:src="@drawable/ic_round_favorite_24"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/philippineSilver" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--      Info Layout      -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/infoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200mdp"
+                android:background="@drawable/shadow"
+                app:layout_constraintBottom_toBottomOf="@id/posterImagesLayout">
+                <!--      Title       -->
+                <TextView
+                    android:id="@+id/tvMovieName"
+                    style="@style/textViewLightStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_10mdp"
+                    android:layout_marginBottom="@dimen/_20mdp"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:gravity="center"
+                    android:textSize="@dimen/_20font_mdp"
+                    app:layout_constraintBottom_toTopOf="@id/otherInfoLayout"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+                <!--        others Info        -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/otherInfoLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <!-- Rate -->
+                    <TextView
+                        android:id="@+id/tvMovieRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5mdp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/philippineSilver"
+                        android:textSize="@dimen/_12font_mdp"
+                        app:drawableStartCompat="@drawable/ic_round_star_24"
+                        app:drawableTint="@color/philippineSilver"
+                        app:layout_constraintEnd_toStartOf="@+id/tvMovieDate"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tvMovieTime"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Time -->
+                    <TextView
+                        android:id="@+id/tvMovieTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5mdp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/philippineSilver"
+                        android:textSize="@dimen/_12font_mdp"
+                        app:drawableStartCompat="@drawable/ic_round_access_time_24"
+                        app:drawableTint="@color/philippineSilver"
+                        app:layout_constraintEnd_toStartOf="@+id/tvMovieRate"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- Date -->
+                    <TextView
+                        android:id="@+id/tvMovieDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/_5mdp"
+                        android:fontFamily="sans-serif-light"
+                        android:textColor="@color/philippineSilver"
+                        android:textSize="@dimen/_12font_mdp"
+                        app:drawableStartCompat="@drawable/ic_round_calendar_today_24"
+                        app:drawableTint="@color/philippineSilver"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/tvMovieRate"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--      summary      -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/summaryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@id/infoLayout">
+                <!--Title-->
+                <TextView
+                    android:id="@+id/tvMovieSummeryTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/summary"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="@dimen/_12font_mdp"
+                    app:drawableStartCompat="@drawable/ic_round_info_24"
+                    app:drawableTint="@color/philippineSilver"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--       Info         -->
+                <TextView
+                    android:id="@+id/tvMovieSummeryInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="@dimen/_10font_mdp"
+                    app:layout_constraintTop_toBottomOf="@id/tvMovieSummeryTitle"
+                    tools:text="test text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--      Actors      -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/actorsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_10mdp"
+                android:layout_marginTop="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@id/summaryLayout">
+                <!--Title-->
+                <TextView
+                    android:id="@+id/tvMovieActorsTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5mdp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/actors"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="@dimen/_12font_mdp"
+                    app:drawableStartCompat="@drawable/ic_round_person_24"
+                    app:drawableTint="@color/philippineSilver"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--       Info         -->
+                <TextView
+                    android:id="@+id/tvMovieActorsInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5mdp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/philippineSilver"
+                    android:textSize="@dimen/_10font_mdp"
+                    app:layout_constraintTop_toBottomOf="@id/tvMovieActorsTitle"
+                    tools:text="test text" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerImages"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginVertical="@dimen/_10mdp"
+                app:layout_constraintTop_toBottomOf="@id/actorsLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!--  Loading  -->
+    <ProgressBar
+        android:id="@+id/loadingProgress"
+        android:layout_width="@dimen/_40mdp"
+        android:layout_height="@dimen/_40mdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

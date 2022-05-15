@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Poster -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewMoviePoster"
+        android:layout_width="@dimen/_110mdp"
+        android:layout_height="@dimen/_140mdp"
+        android:layout_margin="@dimen/_10mdp"
+        app:cardBackgroundColor="@color/chineseBlack"
+        app:cardCornerRadius="@dimen/_5mdp"
+        app:cardElevation="@dimen/_3mdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--    poster image view    -->
+        <ImageView
+            android:id="@+id/ivMoviePoster"
+            android:layout_width="match_parent"
+            tools:src="@tools:sample/backgrounds/scenic"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:ignore="ContentDescription" />
+    </androidx.cardview.widget.CardView>
+
+    <!--    name-->
+    <TextView
+        android:id="@+id/tvMovieName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_7mdp"
+        android:layout_marginTop="@dimen/_10mdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_12font_mdp"
+        app:layout_constraintLeft_toRightOf="@id/cardViewMoviePoster"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cardViewMoviePoster" />
+
+    <!--    rate    -->
+    <TextView
+        android:id="@+id/tvMovieRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_7mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:drawablePadding="@dimen/_5mdp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="1"
+        android:textColor="@color/philippineSilver"
+        android:textSize="@dimen/_12font_mdp"
+        app:drawableStartCompat="@drawable/ic_round_star_24"
+        app:drawableTint="@color/philippineSilver"
+        app:layout_constraintLeft_toRightOf="@id/cardViewMoviePoster"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieName" />
+
+    <!--    country    -->
+    <TextView
+        android:id="@+id/tvMovieCountry"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_7mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:drawablePadding="@dimen/_5mdp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="1"
+        android:textColor="@color/philippineSilver"
+        android:textSize="@dimen/_12font_mdp"
+        app:drawableStartCompat="@drawable/ic_round_language_24"
+        app:drawableTint="@color/philippineSilver"
+        app:layout_constraintLeft_toRightOf="@id/cardViewMoviePoster"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieRate" />
+
+
+    <!--    year    -->
+    <TextView
+        android:id="@+id/tvMovieYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_7mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:drawablePadding="@dimen/_5mdp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="1"
+        android:textColor="@color/philippineSilver"
+        android:textSize="@dimen/_12font_mdp"
+        app:drawableStartCompat="@drawable/ic_round_calendar_today_24"
+        app:drawableTint="@color/philippineSilver"
+        app:layout_constraintLeft_toRightOf="@id/cardViewMoviePoster"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieCountry" />
+
+
+    <!--     More    -->
+    <TextView
+        android:id="@+id/tvMoreInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_7mdp"
+        android:layout_marginTop="@dimen/_5mdp"
+        android:drawablePadding="@dimen/_5mdp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="1"
+        android:text="@string/moreInfo"
+        android:textColor="@color/scarlet"
+        android:textSize="@dimen/_12font_mdp"
+        app:drawableRightCompat="@drawable/ic_round_chevron_right_24"
+        app:drawableTint="@color/scarlet"
+        app:layout_constraintBottom_toBottomOf="@+id/cardViewMoviePoster"
+        app:layout_constraintLeft_toRightOf="@id/cardViewMoviePoster"
+        app:layout_constraintTop_toBottomOf="@id/tvMovieYear" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
