@@ -8,4 +8,4 @@ Libraries :
 - coroutines
 - lifecycle
 - datastore
-- circleindicator
+- circle indicator
